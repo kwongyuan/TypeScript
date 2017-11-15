@@ -20,7 +20,7 @@ namespace ts.server {
         startGroup(): void;
         endGroup(): void;
         msg(s: string, type?: Msg): void;
-        getLogFileName(): string;
+        getLogFileName(): string | undefined;
     }
 
     // TODO: Use a const enum (https://github.com/Microsoft/TypeScript/issues/16804)
