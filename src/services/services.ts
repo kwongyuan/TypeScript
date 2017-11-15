@@ -907,7 +907,7 @@ namespace ts {
         return !s.length || s.charAt(0) === s.charAt(0).toLowerCase();
     }
 
-    export function displayPartsToString(displayParts: SymbolDisplayPart[]) {
+    export function displayPartsToString(displayParts: SymbolDisplayPart[] | undefined) {
         if (displayParts) {
             return map(displayParts, displayPart => displayPart.text).join("");
         }

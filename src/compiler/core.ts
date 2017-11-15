@@ -2575,12 +2575,12 @@ namespace ts {
         );
     }
 
-    export function hasJavaScriptFileExtension(fileName: string) {
-        return forEach(supportedJavascriptExtensions, extension => fileExtensionIs(fileName, extension));
+    export function hasJavaScriptFileExtension(fileName: string): boolean {
+        return some(supportedJavascriptExtensions, extension => fileExtensionIs(fileName, extension));
     }
 
-    export function hasTypeScriptFileExtension(fileName: string) {
-        return forEach(supportedTypeScriptExtensions, extension => fileExtensionIs(fileName, extension));
+    export function hasTypeScriptFileExtension(fileName: string): boolean {
+        return some(supportedTypeScriptExtensions, extension => fileExtensionIs(fileName, extension));
     }
 
     export function isSupportedSourceFileName(fileName: string, compilerOptions?: CompilerOptions, extraFileExtensions?: ReadonlyArray<JsFileExtensionInfo>) {
